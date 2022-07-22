@@ -8,9 +8,9 @@
 	4.1 Write "ESP32" and then click install.
 5.0 Plug ESP32 board to the computer USB port.
 6.0 Click Tools > Board > ESP32 Arduino > WEMOS D1 MINI ESP32.
-7.0 Clicl Tools > Port > COM 
+7.0 Click Tools > Port > COM 
 
 # Testing
 1.0 Click File > Example > 01 Basics > Blink.
-2.0 Press the arrow icon to upload
-The light will turn ON and OFF 
+2.0 Press the arrow icon to upload.
+//The light will turn ON and OFF 
