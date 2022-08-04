@@ -4,10 +4,10 @@ This repository contains codes for the Smart Methods summer training 2022: Inter
 ## Tasks:
 1. [**Speech Recognition Website**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/SpeechRecognitionWebsite)<br>
   Using HTML,CSS,JavaScript to identify Arabic and English words spoken aloud by the user and convert them into readable text shown in the page simultaneously.
-2. [**Steps to use wisdom ESP32**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/HowToUseESP32)<br>
+2. [**Steps To Use Wisdom ESP32**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/HowToUseESP32)<br>
   Guide to connect ESP32 to your computer. 
-3. [**program with WebSerial API**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/WebSerialAPI)<br>
+3. [**Program Website With WebSerial API**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/WebSerialAPI)<br>
   Develop the website from -1- by connecting to devices using the serial port and program the code to control that device.
-4. [**Arduino code to control the direction**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/ArduinoControlCode)<br>
+4. [**Arduino Code To Control The Direction**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/ArduinoControlCode)<br>
   The code here will be used to the device connected to the website by WebSerial API, So the user will be able to contol the direction of the device by speech.
 
