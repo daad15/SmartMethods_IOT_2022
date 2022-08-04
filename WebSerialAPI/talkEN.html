@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Speech to Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
+</link>
+<style>
+    body {
+        font-family: 'Markazi Text', serif;
+        text-align: center;
+        font-size: 30px;
+        align-items: right;
+    }
+
+    p {
+        background-color: #f1f1f1;
+        margin: 20px;
+        padding: 20px;
+        height: 200px;
+        align-items: right;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #2F4F4F;
+        color: #FFFFFF;
+        border: 0px;
+        cursor: pointer;
+        border-radius: 1px;
+        margin: 10px;
+        width: 30%;
+        font-size: 24px;
+        font-family: 'Markazi Text';
+        align-items: left;
+    }
+
+</style>
+</head>
+
+<body>
+    <h2> Speech Recognition</h2>
+    <p>Text appears here  </p>
+    <button>Start</button>
+    <a href="index.html"><button id="btn">Back to Home</button></a>
+    <br>
+    <button onclick="onConnectUsb()" >Connect with Arm</button>
+
+</body>
+<script>
+    //js code to recognize the speech and convert it to text
+    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en';
+    recognition.interimResults = true;
+
+    startButton = document.querySelector('button');        
+
+    startButton.addEventListener('click', function () {
+        try {
+            recognition.start();
+        } catch (error) {
+            console.log("It`s recording now") 
+        }
+    });
+
+    recognition.onstart = function () {
+        startButton.style.backgroundColor = '#8FBC8F'; 
+        startButton.innerHTML = '..  Processing ..';
+    };
+
+    recognition.onspeechend = function () {
+        startButton.style.backgroundColor = '#2F4F4F';
+        startButton.innerHTML = ' Start';
+        recognition.stop();
+    };
+
+    recognition.onresult = function (event) {            
+        const speechToText = event.results[0][0].transcript;
+        document.querySelector('p').innerHTML = speechToText;
+    };
+
+    // js code to detemine the direction LEFT || RIGHT in arabic and english
+    let port;
+    let writer;
+    const textEncoder = new TextEncoder();
+
+    async function getCommand() {
+
+      try {
+        const result = transcript.toLowerCase();
+        const resultSplit = result.split(" ")
+        const resultCommand = resultSplit.slice(-1);
+        if (resultCommand.includes("Right") || resultCommand.includes("right") || resultCommand.includes("يمين")) {
+          await writer.write(textEncoder.encode('right'));
+        }
+
+        if (resultCommand.includes("Left") || resultCommand.includes("left") || resultCommand.includes("يسار")) {
+          await writer.write(textEncoder.encode('left'));
+        }
+
+      } catch (e) {
+        console.log(e);
+        }
+
+    }
+
+    async function onConnectUsb() {
+       try {
+         if (navigator.serial) {
+        port = await navigator.serial.requestPort();
+        await port.open({ baudRate: 115200  });
+        const writableStreamClosed = textEncoder.readable.pipeTo(port.writable);
+        writer = textEncoder.writable.getWriter();
+
+        } else {
+          alert('Web Serial API not supported.');
+        }
+
+      } catch (e) {
+        console.log("error", e);
+        }
+
+    }   
+</script>
+</html>
