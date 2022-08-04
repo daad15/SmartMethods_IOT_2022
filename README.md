@@ -9,5 +9,5 @@ This repository contains codes for the Smart Methods summer training 2022: Inter
 3. [**program with WebSerial API**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/WebSerialAPI)<br>
   Develop the website from -1- by connecting to devices using the serial port and program the code to control that device.
 4. [**Arduino code to control the direction**](https://github.com/daad15/SmartMethods_IOT_2022/tree/main/ArduinoControlCode)<br>
-  The code here will be used to the device connected to the website by WebSerial API, So the use will be able to contol the direction of the device by speech.
+  The code here will be used to the device connected to the website by WebSerial API, So the user will be able to contol the direction of the device by speech.
 
