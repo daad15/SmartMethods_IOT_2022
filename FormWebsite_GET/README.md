@@ -1,5 +1,5 @@
 ## Form Website Using GET Method
-Create a Form website to take an integer value from the sensor and store it on the database, using GET method.<br>
+Create a Form website to take an integer value from the sensor and store it on the database, using GET method. Then retrieve all values entered in a table.<br>
 ## Prerequisite
 - Apache Server to run PHP code 
 
