@@ -1,5 +1,5 @@
 ## Robot Control Panel Interface
-design an interface to control the movement of robot which could be (forward, left, backward, right). When user click on a certain direction the movement will be stored in a database. <br>
+Design an interface to control the movement of the robot which could be in (forward, left, backward, right) direction. When user click on a certain direction the movement will be stored in a database. <br>
 ## Prerequisite
 - Apache Server to run PHP code 
 
