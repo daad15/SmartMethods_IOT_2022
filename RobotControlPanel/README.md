@@ -5,8 +5,8 @@ Design an interface to control the movement of the robot which could be in (forw
 
 ## Screenshots
 
-<img src="/RobotControlPanel/screenshot1.png" >
-<img src="/RobotControlPanel/screenshot2.png" >
-<img src="/RobotControlPanel/screenshot3.png" >
+<img src="/RobotControlPanel/Images/screenshot1.png" >
+<img src="/RobotControlPanel/Images/screenshot2.png" >
+<img src="/RobotControlPanel/Images/screenshot3.png" >
 
 
