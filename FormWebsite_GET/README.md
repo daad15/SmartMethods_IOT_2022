@@ -5,7 +5,7 @@ Create a Form website to take an integer value from the sensor and store it on t
 
 ## Screenshots
 
-<img src="/FormWebsite_GET/screenshot1.png" >
-<img src="/FormWebsite_GET/screenshot2.png" >
-<img src="/FormWebsite_GET/screenshot3.png" >
+<img src="/FormWebsite_GET/Images/screenshot1.png" >
+<img src="/FormWebsite_GET/Images/screenshot2.png" >
+<img src="/FormWebsite_GET/Images/screenshot3.png" >
 
